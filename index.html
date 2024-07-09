@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Tes Kesehatan Mental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <header>
+        <!-- Menyisipkan navigasi dari nav.html -->
+        <div id="navbar"></div>
+    </header>
+
+    <div class="container">
+        <button class="back-button" onclick="history.back()">
+            <img src="back.png" alt="Back" width="20" height="20">
+            Kembali
+        </button>
+        <div id="result-content">
+            <!-- Hasil Tes akan ditampilkan disini -->
+        </div>
+        <div class="actions">
+            <p>Ingin mengulang tes? <a href="tes.html" class="action-link">Ulang tes</a> atau cek <a href="riwayat.html" class="action-link">riwayat tes</a></p>
+        </div>
+        <div class="faq-header"><b>FAQ</b></div>
+        <div class="faq">
+            <div class="faq-item">
+                <button onclick="toggleFaqContent(this)">Mengapa saya harus berkonsultasi ke psikolog?</button>
+                <div class="faq-content">
+                    Berkonsultasi ke psikolog penting karena mereka adalah profesional yang terlatih dalam membantu individu mengatasi masalah kesehatan mental. Mereka dapat memberikan dukungan, pengertian, dan strategi yang dibutuhkan untuk mengelola stres, kecemasan, depresi, dan masalah kesehatan mental lainnya.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFaqContent(this)">Bagaimana penilaian dilakukan?</button>
+                <div class="faq-content">
+                    Penilaian dilakukan dengan berbagai metode, termasuk wawancara dengan psikolog, kuesioner, dan pengamatan perilaku. Psikolog akan mengevaluasi kondisi kesehatan mental Anda berdasarkan informasi yang Anda berikan dan pengamatan mereka selama sesi konseling.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFaqContent(this)">Apakah tes kesehatan dapat diulang?</button>
+                <div class="faq-content">
+                    Ya, Anda dapat mengulang tes kesehatan mental untuk memantau perubahan dalam kondisi Anda atau untuk memeriksa kemajuan setelah mendapatkan perawatan atau konseling. Ini dapat membantu Anda dan psikolog Anda memahami perubahan apa pun yang terjadi dan menyesuaikan rencana perawatan sesuai kebutuhan Anda.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
